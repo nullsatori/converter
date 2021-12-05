@@ -1,122 +1,136 @@
 @import url("https://cdn.jsdelivr.net/npm/reseter.css");
-@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Code+Latin:wght@100;200&family=Roboto+Mono:wght@100&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=M+PLUS+Code+Latin:wght@100;200&family=Roboto+Mono:wght@100&display=swap");
 $primary: #8875cb;
 $secondary: #19245b;
-$main-color: #F44336;
+$main-color: #f44336;
 $secondary-color: #9fa4d0;
-$main-color: #18191A;
+$main-color: #18191a;
 $width: 300px; // Change Me
-html{
-    background-color: #18191A;
+html {
+  background-color: #18191a;
 }
-.AppHeader{
-    text-align: center;
-    font-family: 'M PLUS Code Latin', sans-serif;
-    color: whitesmoke;
-}
-
-.AppHeader p{
-    font-size: 1.5rem;
-    margin: 2% 0 0 0;
+.AppHeader {
+  text-align: center;
+  font-family: "M PLUS Code Latin", sans-serif;
+  color: whitesmoke;
 }
 
-.block{
-    display: flex;
-    flex-direction: column;
-    width: 20rem;
-}
-.block div{
-    display: inline-flex;
+.AppHeader p {
+  font-size: 1.5rem;
+  margin: 2% 0 0 0;
 }
 
+.block {
+  display: flex;
+  flex-direction: column;
+  width: 20rem;
+}
+.block div {
+  display: inline-flex;
+}
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-body {background: $main-color;}
+body {
+  background: $main-color;
+}
 
 .centered {
-    width: $width;
-    height: $width/5;
-    margin: 5% auto;
+  width: $width;
+  height: $width/5;
+  margin: 5% auto;
 }
 
 .group {
-    width: 100%;
-    height: $width/5;
-    overflow: hidden;
-    position: relative;
+  width: 100%;
+  height: $width/5;
+  overflow: hidden;
+  position: relative;
 }
 
 label {
-    position: absolute;
-    top: $width/18;
-    color: rgba(white, .5);
-    font: 400 $width/16 'Roboto Mono', monospace;
-    cursor: text;
-    transition: .25s ease;
+  position: absolute;
+  top: $width/18;
+  color: rgba(white, 0.5);
+  font: 400 $width/16 "Roboto Mono", monospace;
+  cursor: text;
+  transition: 0.25s ease-in-out;
 }
 
 input {
-    display: block;
-    width: 100%;
-    padding-top: $width/16;
-    border: none;
-    border-radius: 0;
-    color: rgb(255, 255, 255);
-    background: $main-color;
-    font-size: $width/15;
-    font-family: 'Roboto Mono', monospace;
+  display: block;
+  width: 100%;
+  padding-top: $width/16;
+  border: none;
+  border-radius: 0;
+  color: rgb(255, 255, 255);
+  background: $main-color;
+  font-size: $width/15;
+  font-family: "Roboto Mono", monospace;
 
-    transition: .3s ease;
-    &:valid {
-        ~label {
-            top: 0;
-            font: 700 $width/25 'Roboto Mono', monospace;
-            color: rgba(#ffffff, .5);
-        }
+  transition: 0.3s ease;
+  &:valid {
+    ~ label {
+      top: 0;
+      font: 700 $width/25 "Roboto Mono", monospace;
+      color: rgba(#ffffff, 0.5);
     }
-    &:focus {
-        outline: none;
-        ~label {
-            top: 0;
-            font: 600 $width/25 'Roboto Mono', monospace;
+  }
+  &:focus {
+    outline: none;
+    ~ label {
+      top: 0;
+      font: 600 $width/25 "Roboto Mono", monospace;
 
-            color: $secondary-color;
-        }
-
-
-        ~ .bar:before {
-            transform: translateX(0);
-        }
+      color: $secondary-color;
     }
 
-
-    &:-webkit-autofill {
-        -webkit-box-shadow: 0 0 0px 1000px $main-color inset;
-        -webkit-text-fill-color: white !important;
+    ~ .bar:before {
+      transform: translateX(0);
     }
+  }
+
+  &:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px $main-color inset;
+    -webkit-text-fill-color: white !important;
+  }
 }
 
 .bar {
-    background: rgba(white, .5);
-    content: '';
-    width: $width;
-    height: $width/150;
-    transition: .3s ease;
+  background: rgba(white, 0.5);
+  content: "";
+  width: $width;
+  height: $width/150;
+  transition: 0.3s ease;
 
-    position: relative;
-    &:before {
-        content: '';
-        position: absolute;
-        width: 100%;
-        height: 150%;
-        background: $secondary-color;
-        transition: 0.5s;
-        transform: translateX(-100%);
-
-    }
+  position: relative;
+  &:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 150%;
+    background: $secondary-color;
+    transition: 0.5s;
+    transform: translateX(-100%);
+  }
 }
 
-::selection {background: rgba($secondary-color, .3);}
+::selection {
+  background: rgba($secondary-color, 0.3);
+}
+
+.exchange {
+  font-family: "M PLUS Code Latin", sans-serif;
+  color: $primary;
+  font-size: 35px;
+  height: 100px;
+  width: 350px;
+  text-align: center;
+  margin: 0 auto;
+  transition: 0.2s;
+}
+.exchange-active {
+  visibility: visible;
+}
