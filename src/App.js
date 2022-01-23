@@ -5,7 +5,7 @@ function App() {
   return (
     <div className="App">
       <header className="AppHeader">
-        <p>the simplest converter you ever seen</p>
+        <p>simple converter</p>
       </header>
       <UserInput />
     </div>
